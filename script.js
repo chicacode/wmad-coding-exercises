@@ -44,4 +44,22 @@ function printEvenNumber(givenNumber){
     }
 }
 
-printEvenNumber(12);
+// printEvenNumber(12);
+
+// Question 3
+
+/* 
+Check if a string contains the letter 'y'. Print 'yes' if it does and 'no' if it does not
+*/
+
+function checkLetters(letter){
+  let transformLetter = letter.toLowerCase();
+  if(transformLetter.includes('y') ){
+    console.log('Yes');
+  }else{
+    console.log('No');
+  }
+}
+
+// checkLetters('hello'); //No
+checkLetters('Yoohoo'); // Yes
