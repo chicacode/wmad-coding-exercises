@@ -14,13 +14,13 @@ Write a Javascript program that accept two integers and display the larger
 */
 
 function showTheLongestNumber(num1, num2) {
-    if(num1 > num2){
-        return console.log('The largest number is: num1', num1);
-    }else if(num2 > num1 ){
-        return console.log('The largest number is: num2', num2);
-    }else{
-        return console.log(`The numbers num1: ${num1} & numb2:  ${num2} are equal`);
-    }
+  if (num1 > num2) {
+    return console.log('The largest number is: num1', num1);
+  } else if (num2 > num1) {
+    return console.log('The largest number is: num2', num2);
+  } else {
+    return console.log(`The numbers num1: ${num1} & numb2:  ${num2} are equal`);
+  }
 }
 
 // showTheLarger(1, 3); // The largest number is: num2 3
@@ -34,14 +34,14 @@ function showTheLongestNumber(num1, num2) {
  Using a For Loop print all even numbers up to and including n. Don't include 0.
 */
 
-function printEvenNumber(givenNumber){
-    for (let n = 1; n < givenNumber; n++) {
-      if(n % 2 === 0){
-        console.log('Is an Even number: ', n)
-      }else{
-        console.log('Is Odd number: ', n)
-      }
+function printEvenNumber(givenNumber) {
+  for (let n = 1; n < givenNumber; n++) {
+    if (n % 2 === 0) {
+      console.log('Is an Even number: ', n)
+    } else {
+      console.log('Is Odd number: ', n)
     }
+  }
 }
 
 // printEvenNumber(12);
@@ -52,14 +52,77 @@ function printEvenNumber(givenNumber){
 Check if a string contains the letter 'y'. Print 'yes' if it does and 'no' if it does not
 */
 
-function checkLetters(letter){
+function checkLetters(letter) {
   let transformLetter = letter.toLowerCase();
-  if(transformLetter.includes('y') ){
+  if (transformLetter.includes('y')) {
     console.log('Yes');
-  }else{
+  } else {
     console.log('No');
   }
 }
 
 // checkLetters('hello'); //No
-checkLetters('Yoohoo'); // Yes
+// checkLetters('Yoohoo'); // Yes
+
+// Question 4
+
+/* 
+Write a function which accepts 4 parameters (different scores of a student for subjects), and
+then calculate the average of all the score.
+
+If the average is more than 90, then console grade A
+If the average is between 70 and 90, then console grade B
+If the average is between 50-70, then console grade C
+Other wise console grade F
+
+*/
+
+// I found two approach
+// First
+function calculateAverageScore(grade1, grade2, grade3, grade4) {
+
+  let average = (grade1 + grade2 + grade3 + grade4) / 4;
+
+  console.log('Average', average);
+
+  if (average > 90) {
+    console.log('Grade A')
+  } else if (average >= 70 && average <= 90) {
+    console.log('Grade B')
+  } else if ((average >= 50 && average < 70)) {
+    console.log('Grade C')
+  } else {
+    console.log('Grade F')
+  }
+
+}
+
+// Second
+
+function calculateAverageScoreFn() {
+
+  let sum = 0
+  for (let index = 0; index < arguments.length; index++) {
+    sum += arguments[index];
+    // console.log('sum', sum);
+  }
+
+  let average = sum / arguments.length;
+
+  console.log('average', average)
+
+  if (average > 90) {
+    console.log('Grade A');
+  } else if (average >= 70 && average <= 90) {
+    console.log('Grade B');
+  } else if ((average >= 50 && average < 70)) {
+    console.log('Grade C');
+  } else {
+    console.log('Grade F');
+  }
+  return average;
+}
+
+
+// calculateAverageScore(100, 90, 78, 85); // Grade B
+calculateAverageScoreFn(78, 100, 100, 99); // Grade A
