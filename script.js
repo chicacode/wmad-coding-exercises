@@ -104,7 +104,6 @@ function calculateAverageScoreFn() {
   let sum = 0
   for (let index = 0; index < arguments.length; index++) {
     sum += arguments[index];
-    // console.log('sum', sum);
   }
 
   let average = sum / arguments.length;
@@ -125,4 +124,30 @@ function calculateAverageScoreFn() {
 
 
 // calculateAverageScore(100, 90, 78, 85); // Grade B
-calculateAverageScoreFn(78, 100, 100, 99); // Grade A
+// calculateAverageScoreFn(78, 100, 100, 99); // Grade A
+
+/****
+ * 
+ * Coding Exercises 2
+ * Vancouver 09/21/22
+ * Geraldine
+ * 
+ ****/
+
+
+// Question 1
+// Print all the odd numbers from 0 to --> n
+// Where n will be dynamic insided a function
+
+function printOddNumbers(n) {
+
+  for (let index = 0; index <= n; index++) {
+    // console.log(index)
+    if (index % 2 !== 0 || index == 0) {
+      console.log('0 & Odd numbers', index)
+    }
+  }
+}
+
+// printOddNumbers(3); // 0, 1, 3
+printOddNumbers(11)
