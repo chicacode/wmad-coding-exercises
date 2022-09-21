@@ -87,9 +87,9 @@ function calculateAverageScore(grade1, grade2, grade3, grade4) {
 
   if (average > 90) {
     console.log('Grade A')
-  } else if (average >= 70 && average <= 90) {
+  } else if (average >= 70) {
     console.log('Grade B')
-  } else if ((average >= 50 && average < 70)) {
+  } else if (average >= 50) {
     console.log('Grade C')
   } else {
     console.log('Grade F')
@@ -112,9 +112,9 @@ function calculateAverageScoreFn() {
 
   if (average > 90) {
     console.log('Grade A');
-  } else if (average >= 70 && average <= 90) {
+  } else if (average >= 70) {
     console.log('Grade B');
-  } else if ((average >= 50 && average < 70)) {
+  } else if (average >= 50) {
     console.log('Grade C');
   } else {
     console.log('Grade F');
@@ -176,16 +176,16 @@ let numListArr = [20, 40, -10, 55, 40, 5, 11]; // 55
 function findLargestNumber(array) {
 
   array = array.sort();
-  let largest = array[0] 
+  let largest = array[0]
 
   for (let index = 0; index < array.length; index++) {
     const element = array[index];
-    if(element > array[0]){
-        largest = element;
-    }  
+    if (element > array[0]) {
+      largest = element;
+    }
   }
   console.log('largest', largest);
   return largest;
 }
 
-findLargestNumber(numListArr)
+findLargestNumber(numListArr);
