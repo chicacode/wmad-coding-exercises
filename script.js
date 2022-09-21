@@ -150,13 +150,13 @@ function printOddNumbers(n) {
 }
 
 // printOddNumbers(3); // 0, 1, 3
-// printOddNumbers(11) // 0, 1, 3, 5, 7, 9, 11
+// printOddNumbers(11); // 0, 1, 3, 5, 7, 9, 11
 
 // Question 2 (ADVANCE)
 // Write a function that takes and array as a parameter and calculates the sum of the
 // numbers inside the array
 
-let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // =  45
+// let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // =  45
 
 function sumOffElementsInArray(array) {
   let result = 0;
@@ -166,4 +166,27 @@ function sumOffElementsInArray(array) {
   console.log('result', result)
 }
 
-sumOffElementsInArray(numList)
+// sumOffElementsInArray(numList);
+
+// Question 3 (ADVANCE)
+// Wite a Function that takes am array as a parameter and returns
+// the largest number inside that array
+
+let numListArr = [20, 40, -10, 55, 40, 5, 11]; // 55
+function largestNumber(array) {
+
+  array = array.sort();
+  let largest = array[0] 
+
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if(element > array[0]){
+        largest = element;
+    }  
+  }
+  console.log('largest', largest);
+  return largest;
+ 
+}
+
+largestNumber(numListArr)
