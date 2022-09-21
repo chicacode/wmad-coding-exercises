@@ -150,4 +150,20 @@ function printOddNumbers(n) {
 }
 
 // printOddNumbers(3); // 0, 1, 3
-printOddNumbers(11)
+// printOddNumbers(11) // 0, 1, 3, 5, 7, 9, 11
+
+// Question 2 (ADVANCE)
+// Write a function that takes and array as a parameter and calculates the sum of the
+// numbers inside the array
+
+let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // =  45
+
+function sumOffElementsInArray(array) {
+  let result = 0;
+  for (const element of array) {
+    result += element;
+  }
+  console.log('result', result)
+}
+
+sumOffElementsInArray(numList)
