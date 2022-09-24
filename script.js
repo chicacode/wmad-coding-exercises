@@ -188,4 +188,90 @@ function findLargestNumber(array) {
   return largest;
 }
 
-findLargestNumber(numListArr);
+// findLargestNumber(numListArr);
+
+/****
+ * 
+ * Coding Exercises 3
+ * Vancouver 09/21/22
+ * Geraldine
+ * 
+ ****/
+
+// Write a function that takes a value n as a parameter, and prints the following pattern
+/*
+
+*
+**
+***
+****
+*****
+******
+
+*/
+
+function printStarTree(number) {
+  let star = "";
+  for (let index = 0; index < number; index++) {
+    star += "*";
+    console.log('star', star);
+  }
+  
+}
+printStarTree(6)
+
+
+
+
+
+//  function christmasTree() {
+//    let numIntro = parseInt(document.getElementById("num1").value);
+//    let message = document.getElementById("message");
+//    for (let index = numIntro; index >= 1; index--) {
+//      for (let jota = 1; jota <= index; jota++) {
+//        // document.write("*");
+//        console.log("hoola");
+
+//        message.innerHTML += "*";
+//      }
+//      // document.write("<br>");
+//      message.innerHTML += "<br>";
+//    }
+//  }
+
+/* 25/05/2020 Geraldine Hernandez
+Exerici 10
+Fes un programa que mostri el següent per pantalla:
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+La línea amb més “*” vindrà donada per un número que l’usuari introduirà en una caixa de text.
+Condició: En tot el codi del programa només hi pot haver-hi dos * 2 tablas
+*/
+
+
+// function newTree() {
+//   let numIntro = parseInt(document.getElementById("num1").value);
+//   let message = document.getElementById("message");
+//   for (let index = 1; index <= numIntro; index++) {
+//     for (let jota = 1; jota <= index; jota++) {
+//       message.innerHTML += "*";
+//     }
+//     message.innerHTML += "<br>";
+//   }
+//   // Esta es la condicion que se debe cumplir en un for ejem index >=1
+//   for (let index = numIntro; index >= 1; index--) {
+//     for (let jota = 1; jota < index; jota++) {
+//       message.innerHTML += "*";
+//     }
+//     message.innerHTML += "<br>";
+//   }
+// }
