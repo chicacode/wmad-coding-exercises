@@ -223,7 +223,7 @@ function printStarTree(number) {
 
 
 // Exercises 3 Question 1
-// Write a Fucntion that takes a values n as a parameter, and prints the following patterm:
+// Write a Fucntion that takes a values n as a parameter, and prints the following pattern:
 
 
 /* 
@@ -262,7 +262,7 @@ function printInvertedTriangle(n) {
 printInvertedTriangle(6);
 
 // Exercises 3 Question 2
-// Write a Function that takes a values n as a parameter, and prints the following patterm:
+// Write a Function that takes a values n as a parameter, and prints the following pattern:
 
 /*
 
@@ -285,4 +285,43 @@ function starDown(n) {
   }
   console.log(star)
 }
-starDown(5)
+// starDown(5)
+
+// Exercises 3 Question 3
+// Write a Function that takes a values n as a parameter, and prints the following patterm:
+/*
+        *
+      *   *
+    *       *
+  *  * * * *  *  
+
+*/
+
+function printPiramid(n) {
+  let piramid = "";
+  for (let index = 1; index <= n; index++) {
+
+    for (let j = 1; j <= n - index; j++) {
+      piramid += " ";
+    }
+
+    for (let k = 0; k < 2 * index - 1; k++) {
+      if (index === 1 || index === n) {
+        piramid += "*";
+      } else {
+        if (k === 0 || k === 2 * index - 2) {
+          console.log('what is:', 2 * index - 2)
+          piramid += "*";
+        } else {
+          piramid += " ";
+        }
+      }
+    }
+    piramid += "\n";
+  }
+
+
+  console.log(piramid);
+}
+
+printPiramid(5)
