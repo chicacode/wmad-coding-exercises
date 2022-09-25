@@ -198,7 +198,7 @@ function findLargestNumber(array) {
  * 
  ****/
 
-// Question 1
+// Test
 //Write a function that takes a value n as a parameter, and prints the following pattern
 /*
 
@@ -217,12 +217,12 @@ function printStarTree(number) {
     star += "*";
     console.log(star);
   }
-  
+
 }
 // printStarTree(6)
 
 
-// Exercises 3 Question 2
+// Exercises 3 Question 1
 // Write a Fucntion that takes a values n as a parameter, and prints the following patterm:
 
 
@@ -241,9 +241,9 @@ function printStarTree(number) {
 *
 */
 
-function printInvertedTriangle(n){
+function printInvertedTriangle(n) {
   let star = "";
-  for (let index = 0; index < n-1; index++) {
+  for (let index = 0; index < n - 1; index++) {
     star += "* ";
     console.log(star);
   }
@@ -258,7 +258,31 @@ function printInvertedTriangle(n){
   }
   console.log(newStar);
 }
- 
+
 printInvertedTriangle(6);
 
+// Exercises 3 Question 2
+// Write a Function that takes a values n as a parameter, and prints the following patterm:
 
+/*
+
+*****
+****
+***
+**
+*
+
+*/
+
+function starDown(n) {
+
+  let star = "";
+  for (let index = 0; index < n; index++) {
+    for (let j = 0; j < n - index; j++) {
+      star += "*";
+    }
+    star += "\n";
+  }
+  console.log(star)
+}
+starDown(5)
