@@ -1,5 +1,8 @@
 /**** 
 
+ALGORITHMS
+Sorting
+
 JavaScript Exercises 
 created by Geraldine Hernandez Al Attrach in WMAD
 Professor: Prabh
@@ -259,7 +262,7 @@ function printInvertedTriangle(n) {
   console.log(newStar);
 }
 
-printInvertedTriangle(6);
+// printInvertedTriangle(6);
 
 // Exercises 3 Question 2
 // Write a Function that takes a values n as a parameter, and prints the following pattern:
@@ -319,9 +322,69 @@ function printPiramid(n) {
     }
     piramid += "\n";
   }
-
-
   console.log(piramid);
 }
 
-printPiramid(5)
+// printPiramid(5);
+
+// Binary Search Algorithm:
+
+let array = [3, 7, 90, 10, 22, 45, 23];
+array.sort(function (a, b) { return a - b });
+
+function binarySearchAlg(arr, value) {
+
+  let low = 0;
+  let high = array.length - 1;
+  if (arr === []) {
+    return -1;
+  }
+
+  while (high >= low) {
+
+    let middle = Math.floor((low + high) / 2);
+    if (arr[middle] === value) {
+
+      return middle;
+    } else if (arr[middle] < value) {
+      low = middle + 1;
+    } else {
+      high = middle - 1;
+    }
+  }
+
+  return -1
+}
+
+// console.log(binarySearchAlg(array, 45), "Value found");
+
+// Exercise 4
+// Quesion 1 Write a function that checks if an array is sorted ?
+let numList = [1, 2, 3, 4, 5, 6];
+// Sorted array means the value starting --> End, it should be either increasing Or decreasing
+
+// [ 1 , 2, 5, 6, 11, 20 ] // Ascending
+// [ 10 , 11, 20 , 5, 4, 20]
+function sortedList(array) {
+  // Write your logic here, // HINT: FOR LOOP
+  let isSorted = false;
+  for (let index = 0; index < array.length; index++) {
+    for (let j = 0; j < array.length; j++) {
+      if(array[j] > array[j+1] ){
+       return isSorted;
+      }  
+    }
+    isSorted = true;
+    return isSorted;
+  }
+}
+
+console.log(sortedList(numList));
+// sortedList(numList) // true
+
+
+console.log(sortedList([50, 10, 4, 4, 2, 3])); // False
+
+// Bubble Sort
+// Selection Sort
+// Merger Sort
