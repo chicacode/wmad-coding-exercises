@@ -365,25 +365,37 @@ let numList = [1, 2, 3, 4, 5, 6];
 
 // [ 1 , 2, 5, 6, 11, 20 ] // Ascending
 // [ 10 , 11, 20 , 5, 4, 20]
-function sortedList(array) {
-  // Write your logic here, // HINT: FOR LOOP
+// function isSortedList(array) {
+//  I don't need to loops cause I'm not sorting I'm just checking
+//   // Write your logic here, // HINT: FOR LOOP
+//   let isSorted = false;
+//   for (let index = 0; index < array.length; index++) {
+//     for (let j = 0; j < array.length; j++) {
+//       if(array[j] > array[j+1] ){
+//        return isSorted;
+//       }  
+//     }
+//     isSorted = true;
+//     return isSorted;
+//   }
+// }
+
+function isSortedList(array) {
+
   let isSorted = false;
   for (let index = 0; index < array.length; index++) {
-    for (let j = 0; j < array.length; j++) {
-      if(array[j] > array[j+1] ){
+      if(array[index] > array[index+1] ){
        return isSorted;
       }  
-    }
     isSorted = true;
     return isSorted;
   }
 }
 
-console.log(sortedList(numList));
+console.log(isSortedList(numList));
 // sortedList(numList) // true
 
-
-console.log(sortedList([50, 10, 4, 4, 2, 3])); // False
+console.log(isSortedList([50, 10, 4, 4, 2, 3])); // False
 
 // Bubble Sort
 // Selection Sort
