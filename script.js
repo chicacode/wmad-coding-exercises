@@ -300,10 +300,13 @@ function starDown(n) {
 
 */
 
+// Learning Patterns
 function printPiramid(n) {
   let piramid = "";
+  // think about numbers of rows = 5
   for (let index = 1; index <= n; index++) {
 
+    // Think about number of spaces
     for (let j = 1; j <= n - index; j++) {
       piramid += " ";
     }
@@ -366,7 +369,7 @@ let numList = [1, 2, 3, 4, 5, 6];
 // [ 1 , 2, 5, 6, 11, 20 ] // Ascending
 // [ 10 , 11, 20 , 5, 4, 20]
 // function isSortedList(array) {
-//  I don't need to loops cause I'm not sorting I'm just checking
+//  I don't need two loops cause I'm not sorting I'm just checking
 //   // Write your logic here, // HINT: FOR LOOP
 //   let isSorted = false;
 //   for (let index = 0; index < array.length; index++) {
@@ -379,24 +382,72 @@ let numList = [1, 2, 3, 4, 5, 6];
 //     return isSorted;
 //   }
 // }
+// [1,2,3,4,5]
+// is i = 1 greater than i+1 = 2 
 
-function isSortedList(array) {
-
-  let isSorted = false;
+function isAscendingSortedList(array){
+  let isSorted = true;
   for (let index = 0; index < array.length; index++) {
       if(array[index] > array[index+1] ){
-       return isSorted;
+       return false;
       }  
-    isSorted = true;
-    return isSorted;
+  }
+  return isSorted;
+}
+
+// Time complexity - 0(n)
+function isDescendingSortedList(array){
+  let isSorted = true;
+  for (let index = 0; index < array.length; index++) {
+  
+      if(array[index] < array[index+1] ){
+       return false;
+      }   
+  }
+  return isSorted;
+}
+
+function isSortedList(direction, array) {
+
+  if(typeof direction !== 'string'){
+    console.log('Sorry, you should enter a valid data type');
+    return false;
+  }
+
+  if(direction === 'asc'){
+    console.log('asc')
+    return isAscendingSortedList(array)
+  }else{
+    console.log('desc')
+    return isDescendingSortedList(array)
   }
 }
 
-console.log(isSortedList(numList));
+// console.log(isSortedList('asc', numList));
 // sortedList(numList) // true
 
-console.log(isSortedList([50, 10, 4, 4, 2, 3])); // False
+console.log(isSortedList('des', [50, 10, 4, 4, 2, 3])); // False
+
+// Exercise 5
+
+function findDuplicatedNumberInSorted(array){
+  for (let index = 0; index < array.length; index++) {
+    if(array[index] === array[index+1]){
+      return array[index];
+    }
+    
+  }
+}
+console.log(findDuplicatedNumberInSorted([1,2,3,3,5,7,9,10]), 'founded');
 
 // Bubble Sort
 // Selection Sort
 // Merger Sort
+
+// When is sorted we use one loop, when in not sorted or unserted array we use just two for
+// 2 loops Not sorted array
+// 1 loop sorted array
+// .sort() fn // O(n log n)
+
+// Another solution for findDuplicatedNumberInSorted
+// Conditions: Need to be inside a range and no negatives numbers
