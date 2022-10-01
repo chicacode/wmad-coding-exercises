@@ -442,7 +442,7 @@ console.log(findDuplicatedNumberInSorted([1,2,3,3,5,7,9,10]), 'founded');
 
 // Bubble Sort
 // Selection Sort
-// Merger Sort
+// Merge Sort
 
 // When is sorted we use one loop, when in not sorted or unserted array we use just two for
 // 2 loops Not sorted array
