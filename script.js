@@ -385,39 +385,39 @@ let numList = [1, 2, 3, 4, 5, 6];
 // [1,2,3,4,5]
 // is i = 1 greater than i+1 = 2 
 
-function isAscendingSortedList(array){
+function isAscendingSortedList(array) {
   let isSorted = true;
   for (let index = 0; index < array.length; index++) {
-      if(array[index] > array[index+1] ){
-       return false;
-      }  
+    if (array[index] > array[index + 1]) {
+      return false;
+    }
   }
   return isSorted;
 }
 
 // Time complexity - 0(n)
-function isDescendingSortedList(array){
+function isDescendingSortedList(array) {
   let isSorted = true;
   for (let index = 0; index < array.length; index++) {
-  
-      if(array[index] < array[index+1] ){
-       return false;
-      }   
+
+    if (array[index] < array[index + 1]) {
+      return false;
+    }
   }
   return isSorted;
 }
 
 function isSortedList(direction, array) {
 
-  if(typeof direction !== 'string'){
+  if (typeof direction !== 'string') {
     console.log('Sorry, you should enter a valid data type');
     return false;
   }
 
-  if(direction === 'asc'){
+  if (direction === 'asc') {
     console.log('asc')
     return isAscendingSortedList(array)
-  }else{
+  } else {
     console.log('desc')
     return isDescendingSortedList(array)
   }
@@ -430,15 +430,15 @@ console.log(isSortedList('des', [50, 10, 4, 4, 2, 3])); // False
 
 // Exercise 5
 
-function findDuplicatedNumberInSorted(array){
+function findDuplicatedNumberInSorted(array) {
   for (let index = 0; index < array.length; index++) {
-    if(array[index] === array[index+1]){
+    if (array[index] === array[index + 1]) {
       return array[index];
     }
-    
+
   }
 }
-console.log(findDuplicatedNumberInSorted([1,2,3,3,5,7,9,10]), 'founded');
+// console.log(findDuplicatedNumberInSorted([1,2,3,3,5,7,9,10]), 'founded');
 
 // Bubble Sort
 // Selection Sort
@@ -451,3 +451,71 @@ console.log(findDuplicatedNumberInSorted([1,2,3,3,5,7,9,10]), 'founded');
 
 // Another solution for findDuplicatedNumberInSorted
 // Conditions: Need to be inside a range and no negatives numbers
+
+
+// Exercises 5
+
+// Question 1 Write a function to find the index of the value in the 2D Array
+
+
+let numListArra = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+function findIndex(array, target) {
+  // Write the logic
+  if (array.length === 0) {
+    return -1;
+  }
+ let newArr = new Array();
+  for (let index = 0; index < array.length; index++) {
+    // const element = array[index];
+    // console.log('element', element);
+    for (let j = 0; j < array.length; j++) {
+      if(array[index][j]=== target ){
+        console.log('index', index)
+        console.log('array[index] ', array[index][j] )
+        console.log('target', target)
+        newArr.push(index, j);
+        console.log('newA', newArr)
+        return  newArr;
+      }
+      
+    }
+}
+      
+}
+  // return array[index][j]
+ // return [0, 1] // Here 0 is the index of outer array, and 1 is the index of inner array
+
+
+/* 
+i   array.length   arra[i]  target 
+0    3             0          5
+
+
+
+
+
+*/
+
+console.log(findIndex(numListArra, 5), 'founded'); // [1, 1]
+
+
+
+// Question 2 Write a function that takes a string, and capitalizes every first letter of the word
+
+let str = "hello world";
+
+function capitlize(str) {
+  // return's first capitalized
+}
+
+capitlize(str); // Hello World
+
+// HINT - .split method on a string
+// .join method on the array
+
+
+// Question 3 , Write a binary function using recursion (VERY ADVANCE)
+
+
+// Question 4 , Write a function to find the sum of numbers in an array but using recursion
