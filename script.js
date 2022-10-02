@@ -492,19 +492,20 @@ let str = "hello world";
 
 function capitlize(str) {
   // return's first capitalized
-  let divided = str.split(' ');
-  let firstWord = divided[0];
-  let secondWord = divided[1];
+  // split a sentence in array of words
+  let wordsInArray = str.split(' ');
 
-  firstWord = firstWord.split('')[0].toUpperCase() + firstWord.substring(1);
-  secondWord = secondWord.split('')[0].toUpperCase() + secondWord.substring(1);
+  for (let index = 0; index < wordsInArray.length; index++) {
+    // uppercase first letter of each word amd concatenates the rest of string
+    wordsInArray[index] = wordsInArray[index][0].toUpperCase() + wordsInArray[index].substring(1);
+  }
+  // [ 'Hello', 'World' ]
 
-  let newWord =  firstWord.split() + ' ' + secondWord.split();
-  console.log('hola', newWord)
-  return newWord;
+  let newWordJoined = wordsInArray.join(" ");
+  return newWordJoined;
 }
 
-capitlize(str); // Hello World
+console.log(capitlize(str)); // Hello World
 
 // HINT - .split method on a string
 // .join method on the array
