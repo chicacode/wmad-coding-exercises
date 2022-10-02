@@ -465,37 +465,22 @@ function findIndex(array, target) {
   if (array.length === 0) {
     return -1;
   }
- let newArr = new Array();
+  let newArr = new Array();
   for (let index = 0; index < array.length; index++) {
-    // const element = array[index];
-    // console.log('element', element);
+
     for (let j = 0; j < array.length; j++) {
-      if(array[index][j]=== target ){
-        console.log('index', index)
-        console.log('array[index] ', array[index][j] )
-        console.log('target', target)
+      if (array[index][j] === target) {
         newArr.push(index, j);
         console.log('newA', newArr)
-        return  newArr;
+        return newArr;
       }
-      
     }
+  }
 }
-      
-}
-  // return array[index][j]
- // return [0, 1] // Here 0 is the index of outer array, and 1 is the index of inner array
+
+// return [0, 1] // Here 0 is the index of outer array, and 1 is the index of inner array
 
 
-/* 
-i   array.length   arra[i]  target 
-0    3             0          5
-
-
-
-
-
-*/
 
 console.log(findIndex(numListArra, 5), 'founded'); // [1, 1]
 
@@ -507,6 +492,16 @@ let str = "hello world";
 
 function capitlize(str) {
   // return's first capitalized
+  let divided = str.split(' ');
+  let firstWord = divided[0];
+  let secondWord = divided[1];
+
+  firstWord = firstWord.split('')[0].toUpperCase() + firstWord.substring(1);
+  secondWord = secondWord.split('')[0].toUpperCase() + secondWord.substring(1);
+
+  let newWord =  firstWord.split() + ' ' + secondWord.split();
+  console.log('hola', newWord)
+  return newWord;
 }
 
 capitlize(str); // Hello World
