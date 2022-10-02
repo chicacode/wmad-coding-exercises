@@ -493,6 +493,9 @@ let str = "hello world";
 function capitlize(str) {
   // return's first capitalized
   // split a sentence in array of words
+  if (!str) {
+    return -1
+  }
   let wordsInArray = str.split(' ');
 
   for (let index = 0; index < wordsInArray.length; index++) {
@@ -514,4 +517,15 @@ console.log(capitlize(str)); // Hello World
 // Question 3 , Write a binary function using recursion (VERY ADVANCE)
 
 
-// Question 4 , Write a function to find the sum of numbers in an array but using recursion
+// Question 4 , Write a function to find the sum of numbers in an array but using recursion 
+function sumNumbers(array) {
+  console.log(array)
+  // corner cases
+  if (array.length === 0) {
+    return 0
+  }else{
+    return sumNumbers(array.slice(1)) + array[0]
+  }
+}
+console.log(sumNumbers([2, 3, 4]));
+console.log(sumNumbers([1, 2, 3]));
