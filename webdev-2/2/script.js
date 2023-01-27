@@ -2,13 +2,14 @@ import movies from "./movies.json" assert {type: 'json'};
 // console.log("Hello Prabh, assignment 2!");
 
 const button = document.getElementById("button-submit");
-
+const buttonCleanTable = document.getElementById("clean-table");
+const tBody = document.querySelector("#movies");
 
 function createTable() {
 
-    const tBody = document.querySelector("#movies")
-
     tBody.innerHTML = "";
+
+    tBody.classList.remove("clean-table")
     for (let index = 0; index < movies.length; index++) {
         const row = document.createElement("tr");
         // console.log("creating movie table",movies);
@@ -49,4 +50,10 @@ function createTable() {
 
 }
 
-button.addEventListener("click", createTable)
+function deleteTable() {
+
+    tBody.classList.add("clean-table")
+}
+
+button.addEventListener("click", createTable);
+buttonCleanTable.addEventListener("click", deleteTable)

@@ -76,7 +76,7 @@ section {
   padding: 50px;
 }
 
-button {
+button, .button-clean-table {
   color: rgba(206, 22, 138, 0.721);
   padding: 20px;
   background-color: rgba(248, 202, 222, 0.713) ;
@@ -90,11 +90,16 @@ button {
   box-shadow: 3px 0.5px 30px rgba(206, 22, 138, 0.721);
 }
 
+.button-clean-table{
+    background-color: rgba(170, 233, 204, 0.709);
+    color: #0b3b34;
+}
 button:hover {
   background-color: hsla(211, 58%, 79%, 1);
   color: #3b1e3a;
   cursor: pointer;
 }
+
 
 #table-container {
     height: 65vh;
@@ -175,4 +180,8 @@ a.creator-link{
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.clean-table{
+    display: none;
 }
