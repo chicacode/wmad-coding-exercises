@@ -1,0 +1,68 @@
+[
+    {
+      "name": "Matrix",
+      "date_released": "1999-31-03",
+      "name_director": [
+        "Lana Wachowski",
+        "Lilly Wachowski"
+      ],
+      "key_actor": "Keanu Reaves",
+      "type": "Science Fiction"
+    },
+    {
+      "name": "La La Land",
+      "date_released": "2016-12-16",
+      "name_director": "Damien Chazelle",
+      "key_actor": "Ryan Gosling",
+      "type": "Romance"
+    },
+    {
+      "name": "The Social Network",
+      "date_released": "2010-10-01",
+      "name_director": "David Fincher",
+      "key_actor": "Jesse Eisenberg",
+      "type": "Entrepreneur"
+    },
+    {
+      "name": "Big Fish",
+      "date_released": "2003-12-10",
+      "name_director": "Tim Burton",
+      "key_actor": "Ewan McGregor",
+      "type": "Science Fiction"
+    },
+    {
+      "name": "Les Misérables",
+      "date_released": "2012-25-12",
+      "name_director": "Tom Hooper",
+      "key_actor": "Hugh Jackman",
+      "type": "Science Fiction"
+    },
+    {
+      "name": "Lost in Translation",
+      "date_released": "2004-31-03",
+      "name_director": "Sofia Coppola",
+      "key_actor": "Bill Murray",
+      "type": "Science Fiction"
+    },
+    {
+      "name": "Interstellar",
+      "date_released": "2014-07-11",
+      "name_director": "Christopher Nolan",
+      "key_actor": "Matthew McConaughey",
+      "type": "Science Fiction"
+    },
+    {
+      "name": "Whiplash",
+      "date_released": "2014-07-11",
+      "name_director": "Damien Chazelle",
+      "key_actor": "Miles Teller",
+      "type": "Science Fiction"
+    },
+    {
+      "name": "Seeking a Friend for the End of the World",
+      "date_released": "2012-06-22",
+      "name_director": "Lorene Scafaria",
+      "key_actor": "Keira Knightley",
+      "type": "Science Fiction"
+    }
+  ]

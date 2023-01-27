@@ -435,7 +435,6 @@ function findDuplicatedNumberInSorted(array) {
     if (array[index] === array[index + 1]) {
       return array[index];
     }
-
   }
 }
 // console.log(findDuplicatedNumberInSorted([1,2,3,3,5,7,9,10]), 'founded');
@@ -480,11 +479,7 @@ function findIndex(array, target) {
 
 // return [0, 1] // Here 0 is the index of outer array, and 1 is the index of inner array
 
-
-
 console.log(findIndex(numListArra, 5), 'founded'); // [1, 1]
-
-
 
 // Question 2 Write a function that takes a string, and capitalizes every first letter of the word
 
@@ -529,3 +524,25 @@ function sumNumbers(array) {
 }
 console.log(sumNumbers([2, 3, 4]));
 console.log(sumNumbers([1, 2, 3]));
+
+if(true){
+  var a = 10;
+}else{
+  var b = 20;
+}
+
+console.log(a);
+console.log(b);
+
+var obj = {
+  name: 'Bob',
+  age: 30,
+  defineThis: function(){
+    function a(){
+      console.log(this===obj)
+    }
+    a()
+  },
+}
+
+obj.defineThis();
