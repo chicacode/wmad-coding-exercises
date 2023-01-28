@@ -16,15 +16,15 @@ Vancouver, 9/17/22
 Write a Javascript program that accept two integers and display the larger
 */
 
-function showTheLongestNumber(num1, num2) {
-  if (num1 > num2) {
-    return console.log('The largest number is: num1', num1);
-  } else if (num2 > num1) {
-    return console.log('The largest number is: num2', num2);
-  } else {
-    return console.log(`The numbers num1: ${num1} & numb2:  ${num2} are equal`);
-  }
-}
+// function showTheLongestNumber(num1, num2) {
+//   if (num1 > num2) {
+//     return console.log('The largest number is: num1', num1);
+//   } else if (num2 > num1) {
+//     return console.log('The largest number is: num2', num2);
+//   } else {
+//     return console.log(`The numbers num1: ${num1} & numb2:  ${num2} are equal`);
+//   }
+// }
 
 // showTheLarger(1, 3); // The largest number is: num2 3
 // showTheLarger(3, 1); // The largest number is: num1 3
@@ -37,15 +37,15 @@ function showTheLongestNumber(num1, num2) {
  Using a For Loop print all even numbers up to and including n. Don't include 0.
 */
 
-function printEvenNumber(givenNumber) {
-  for (let n = 1; n < givenNumber; n++) {
-    if (n % 2 === 0) {
-      console.log('Is an Even number: ', n)
-    } else {
-      console.log('Is Odd number: ', n)
-    }
-  }
-}
+// function printEvenNumber(givenNumber) {
+//   for (let n = 1; n < givenNumber; n++) {
+//     if (n % 2 === 0) {
+//       console.log('Is an Even number: ', n)
+//     } else {
+//       console.log('Is Odd number: ', n)
+//     }
+//   }
+// }
 
 // printEvenNumber(12);
 
@@ -55,14 +55,14 @@ function printEvenNumber(givenNumber) {
 Check if a string contains the letter 'y'. Print 'yes' if it does and 'no' if it does not
 */
 
-function checkLetters(letter) {
-  let transformLetter = letter.toLowerCase();
-  if (transformLetter.includes('y')) {
-    console.log('Yes');
-  } else {
-    console.log('No');
-  }
-}
+// function checkLetters(letter) {
+//   let transformLetter = letter.toLowerCase();
+//   if (transformLetter.includes('y')) {
+//     console.log('Yes');
+//   } else {
+//     console.log('No');
+//   }
+// }
 
 // checkLetters('hello'); //No
 // checkLetters('Yoohoo'); // Yes
@@ -82,48 +82,48 @@ Other wise console grade F
 
 // I found two approach
 // First
-function calculateAverageScore(grade1, grade2, grade3, grade4) {
+// function calculateAverageScore(grade1, grade2, grade3, grade4) {
 
-  let average = (grade1 + grade2 + grade3 + grade4) / 4;
+//   let average = (grade1 + grade2 + grade3 + grade4) / 4;
 
-  console.log('Average', average);
+//   console.log('Average', average);
 
-  if (average > 90) {
-    console.log('Grade A')
-  } else if (average >= 70) {
-    console.log('Grade B')
-  } else if (average >= 50) {
-    console.log('Grade C')
-  } else {
-    console.log('Grade F')
-  }
+//   if (average > 90) {
+//     console.log('Grade A')
+//   } else if (average >= 70) {
+//     console.log('Grade B')
+//   } else if (average >= 50) {
+//     console.log('Grade C')
+//   } else {
+//     console.log('Grade F')
+//   }
 
-}
+// }
 
 // Second
 
-function calculateAverageScoreFn() {
+// function calculateAverageScoreFn() {
 
-  let sum = 0
-  for (let index = 0; index < arguments.length; index++) {
-    sum += arguments[index];
-  }
+//   let sum = 0
+//   for (let index = 0; index < arguments.length; index++) {
+//     sum += arguments[index];
+//   }
 
-  let average = sum / arguments.length;
+//   let average = sum / arguments.length;
 
-  console.log('average', average)
+//   console.log('average', average)
 
-  if (average > 90) {
-    console.log('Grade A');
-  } else if (average >= 70) {
-    console.log('Grade B');
-  } else if (average >= 50) {
-    console.log('Grade C');
-  } else {
-    console.log('Grade F');
-  }
-  return average;
-}
+//   if (average > 90) {
+//     console.log('Grade A');
+//   } else if (average >= 70) {
+//     console.log('Grade B');
+//   } else if (average >= 50) {
+//     console.log('Grade C');
+//   } else {
+//     console.log('Grade F');
+//   }
+//   return average;
+// }
 
 
 // calculateAverageScore(100, 90, 78, 85); // Grade B
@@ -142,15 +142,15 @@ function calculateAverageScoreFn() {
 // Print all the odd numbers from 0 to --> n
 // Where n will be dynamic insided a function
 
-function printOddNumbers(n) {
+// function printOddNumbers(n) {
 
-  for (let index = 0; index <= n; index++) {
-    // console.log(index)
-    if (index % 2 !== 0 || index == 0) {
-      console.log('0 & Odd numbers', index)
-    }
-  }
-}
+//   for (let index = 0; index <= n; index++) {
+//     // console.log(index)
+//     if (index % 2 !== 0 || index == 0) {
+//       console.log('0 & Odd numbers', index)
+//     }
+//   }
+// }
 
 // printOddNumbers(3); // 0, 1, 3
 // printOddNumbers(11); // 0, 1, 3, 5, 7, 9, 11
@@ -175,21 +175,21 @@ function sumOfElementsInArray(array) {
 // Wite a Function that takes am array as a parameter and returns
 // the largest number inside that array
 
-let numListArr = [20, 40, -10, 55, 40, 5, 11]; // 55
-function findLargestNumber(array) {
+// let numListArr = [20, 40, -10, 55, 40, 5, 11]; // 55
+// function findLargestNumber(array) {
 
-  array = array.sort();
-  let largest = array[0]
+//   array = array.sort();
+//   let largest = array[0]
 
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    if (element > array[0]) {
-      largest = element;
-    }
-  }
-  console.log('largest', largest);
-  return largest;
-}
+//   for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+//     if (element > array[0]) {
+//       largest = element;
+//     }
+//   }
+//   console.log('largest', largest);
+//   return largest;
+// }
 
 // findLargestNumber(numListArr);
 
@@ -426,7 +426,7 @@ function isSortedList(direction, array) {
 // console.log(isSortedList('asc', numList));
 // sortedList(numList) // true
 
-console.log(isSortedList('des', [50, 10, 4, 4, 2, 3])); // False
+// console.log(isSortedList('des', [50, 10, 4, 4, 2, 3])); // False
 
 // Exercise 5
 
@@ -479,7 +479,7 @@ function findIndex(array, target) {
 
 // return [0, 1] // Here 0 is the index of outer array, and 1 is the index of inner array
 
-console.log(findIndex(numListArra, 5), 'founded'); // [1, 1]
+// console.log(findIndex(numListArra, 5), 'founded'); // [1, 1]
 
 // Question 2 Write a function that takes a string, and capitalizes every first letter of the word
 
@@ -503,7 +503,7 @@ function capitlize(str) {
   return newWordJoined;
 }
 
-console.log(capitlize(str)); // Hello World
+// console.log(capitlize(str)); // Hello World
 
 // HINT - .split method on a string
 // .join method on the array
@@ -514,35 +514,71 @@ console.log(capitlize(str)); // Hello World
 
 // Question 4 , Write a function to find the sum of numbers in an array but using recursion 
 function sumNumbers(array) {
-  console.log(array)
+  // console.log(array)
   // corner cases
   if (array.length === 0) {
     return 0
-  }else{
+  } else {
     return sumNumbers(array.slice(1)) + array[0]
   }
 }
-console.log(sumNumbers([2, 3, 4]));
-console.log(sumNumbers([1, 2, 3]));
+// console.log(sumNumbers([2, 3, 4]));
+// console.log(sumNumbers([1, 2, 3]));
 
-if(true){
+if (true) {
   var a = 10;
-}else{
+} else {
   var b = 20;
 }
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
 var obj = {
   name: 'Bob',
   age: 30,
-  defineThis: function(){
-    function a(){
-      console.log(this===obj)
+  defineThis: function () {
+    function a() {
+      // console.log(this===obj)
     }
     a()
   },
 }
 
 obj.defineThis();
+
+// write a loop
+let people = ["Greg", "Mary", "Devon", "James"];
+for (let index = 0; index < people.length; index++) {
+  console.log("people arr: ", people[index])
+}
+
+// remove Greg from arr
+let newpeople = people.shift();// remove first ele
+
+console.log("new Atrr: ", people) //  ['Mary', 'Devon', 'James']
+
+// remove James from arr
+let newArrPeo = people.pop(); // remove last ele
+
+console.log("new Atrr: ", people) //   ['Mary', 'Devon']
+
+// add first 
+let addPeo = people.unshift("Matt");// add in first position
+console.log("new Atrr: ", people) // ['Matt', 'Mary', 'Devon']
+
+// add last
+let addLastPeo = people.push("Geri");// add in first position
+console.log("new Atrr: ", people) // ['Matt', 'Mary', 'Devon', 'Geri']
+
+// Using a loop, iterate through this array and after console.log-ing "Mary", exit from the loop.
+for (let index = 0; index < people.length; index++) {
+
+  if (index > 1) {
+    console.log(" after Includes")
+    break
+  }
+  console.log("before includes ", people[index])
+}
+
+// https://dribbble.com/shots/14568765-Dona-mobile-composer-interactions
