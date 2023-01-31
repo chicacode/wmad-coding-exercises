@@ -581,4 +581,36 @@ for (let index = 0; index < people.length; index++) {
   console.log("before includes ", people[index])
 }
 
-// https://dribbble.com/shots/14568765-Dona-mobile-composer-interactions
+// Write the command to make a copy of the array using slice. The copy should NOT include "Mary" or "Matt".
+let copyOfPeopleArr = people.slice(2, 4); //  ['Devon', 'Geri']
+console.log(copyOfPeopleArr);
+
+// Write the command that gives the indexOf where "Mary" is located.
+
+console.log(people.indexOf("Mary")); //1
+console.log(people.indexOf("Foo")); //-1
+
+people.splice(2, 1, "Elizabeth", "Artie");
+console.log(people) // ['Matt', 'Mary', 'Elizabeth', 'Artie', 'Geri']
+
+let withBob = people.concat("Bob");
+console.log(withBob); //  ['Matt', 'Mary', 'Elizabeth', 'Artie', 'Geri', 'Bob']
+
+// REDUCE
+// Reduce is HOF(Higher Order Function ) where you can reduce the whole array to  a single value
+
+// For Example
+let numListArr = [100, -2, 33, 490, 50098, 66, '10'];
+
+// So you have to write the same logic using reduce but to find minimum value inside the array
+
+let minimunValueOfArr = numListArr.reduce((acc, current) => {
+  if (current < acc) {
+    return current;
+  }
+
+  return acc;
+
+}, Infinity)
+
+console.log(minimunValueOfArr, "USING REDUCE");
