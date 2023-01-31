@@ -614,3 +614,12 @@ let minimunValueOfArr = numListArr.reduce((acc, current) => {
 }, Infinity)
 
 console.log(minimunValueOfArr, "USING REDUCE");
+
+// Write a function that filters an array based on the elements which contains the keyword buzz
+
+let arrayBuzz = ['fizz', 'fizzbuzz', 'buzzfizz', 'fiz', 'buzz', 'buzzFizz'];
+
+// output array = ['fizzbuzz', 'buzzfizz', 'buzz', 'buzzFizz']
+
+let filteredBuzzNames = arrayBuzz.filter(word => word.includes("buzz"));
+console.log("Buzz: ", filteredBuzzNames)
