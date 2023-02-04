@@ -100,12 +100,12 @@ push() method which is used to add new elements  to the end of the array. This f
 
 11. - ## What is the expected answer to this code?
 
-``let string = "";
-let object = { a: 1, b: 2, c: 3 };
+``let string = "";``
+``let object = { a: 1, b: 2, c: 3 };``
 
-for (let key in object) {
-  string += object[key];
-}``
+``for (let key in object) {``
+  ``string += object[key];``
+``}``
 
 ``console.log(string); // 123``
 
