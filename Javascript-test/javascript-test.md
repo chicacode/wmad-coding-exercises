@@ -146,11 +146,9 @@ JavaScript objects can only be used in JavaScript.
 
 https://www.boredapi.com/api/activity
 
-`function giveMetheAnswer(){
-
+function giveMetheAnswer(){
   fetch("https://www.boredapi.com/api/activity")
   .then(response => {
-
     return response.json();
   })
   .then(jsonResponse => {
@@ -160,15 +158,16 @@ https://www.boredapi.com/api/activity
     console.log(error);
 })
 }
-giveMetheAnswer();`
+giveMetheAnswer();
 
 Response
 
 1. {"activity":"Clean out your closet and donate the clothes you've outgrown","type":"charity","participants":1,"price":0,"link":"","key":"9026787","accessibility":0.1}
 
-jsonResponse 
-{activity: 'Organize a bookshelf', type: 'busywork', participants: 1, price: 0, link: '', …}
-{
+2. jsonResponse 
+
+  {activity: 'Organize a bookshelf', type: 'busywork', participants: 1, price: 0, link: '', …}
+3. {
     "activity": "Have a photo session with some friends",
     "type": "social",
     "participants": 4,
@@ -178,7 +177,7 @@ jsonResponse
     "accessibility": 0.8
 }
 
-{
+4. {
     "activity": "Mow your neighbor's lawn",
     "type": "charity",
     "participants": 1,
