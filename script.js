@@ -611,7 +611,7 @@ let minimunValueOfArr = numListArr.reduce((acc, current) => {
 
   return acc;
 
-}, Infinity)
+}, Infinity) // Infinity is the maximum valuable possible
 
 console.log(minimunValueOfArr, "USING REDUCE");
 
@@ -623,3 +623,57 @@ let arrayBuzz = ['fizz', 'fizzbuzz', 'buzzfizz', 'fiz', 'buzz', 'buzzFizz'];
 
 let filteredBuzzNames = arrayBuzz.filter(word => word.includes("buzz"));
 console.log("Buzz: ", filteredBuzzNames)
+
+
+// TEST
+
+
+// for (var i = 0 ; i < 5 ; i++) {
+//   setTimeout(() => {
+//   console.log("for - var - setTimeOut", i);
+// }, 0);
+// }
+
+// for (let i = 0 ; i < 5 ; i++) {
+//   setTimeout(() => {
+//   console.log("setTimeOut", i);
+// }, 0);
+// }
+
+
+let string = "";
+let object = { a: 1, b: 2, c: 3 };
+
+for (let key in object) {
+  string += object[key];
+}
+
+// console.log("Here", string);
+
+
+let array2 = [1,2,3, 0, 4,10, 0];
+let output = array2.filter((item) => {
+  console.log(item)
+  return item
+}); 
+
+// console.log("output", output)
+
+function giveMetheAnswer(){
+
+  fetch("https://www.boredapi.com/api/activity")
+  .then(response => {
+
+    return response.json();
+  })
+  .then(jsonResponse => {
+   return console.log("jsonResponse", jsonResponse);
+  }).catch((error) => {
+    // Handle the error
+    console.log(error);
+})
+}
+giveMetheAnswer();
+
+//output 
+// {"activity":"Clean out your closet and donate the clothes you've outgrown","type":"charity","participants":1,"price":0,"link":"","key":"9026787","accessibility":0.1}
