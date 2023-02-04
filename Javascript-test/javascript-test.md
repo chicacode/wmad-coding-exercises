@@ -12,9 +12,9 @@
 
 2. - ## Name 3 examples of ES6 features which you learnt.
 
-- let / const keywords
+- ``let / const keywords
 - arrow functions ()=>
-- For / of
+- For / of``
 
 3.  - ## What is the difference between let and const?
       Although var declarations are globally scoped or function scoped, let and const keywords are block scope. But even these are though are block scoped, there is still difference between these keyowords.
@@ -35,23 +35,23 @@ setInterval() is a method that repeats a specific functions or piece of code, st
 What will be the output of the following ?
 
 
-for (var i = 0 ; i < 5 ; i++) {
+``for (var i = 0 ; i < 5 ; i++) {
 setTimeout(() => {
 console.log(i); // 5
 }, 0);
-}
+}``
 
-for (let i = 0 ; i < 5 ; i++) {
+``for (let i = 0 ; i < 5 ; i++) {
 setTimeout(() => {
 console.log(i);  
 }, 0);
-}
+}``
 
-0
+``0
 1
 2
 3
-4
+4``
 
 6. -  ## What are promises?
 Is an object representing the eventual completition or failure of an asynchonous operation. Promises represent a value that is promised and once resolved, will always resolve to that same value
@@ -62,11 +62,11 @@ Promises have three states:
 
 7. -  ## Convert this async function to async/await
 
-getQuote().then((quote) => {
+``getQuote().then((quote) => {
   console.log(quote);
 }).catch(function(err) {
   console.log(err);
-});
+});``
 
 // after this line,
 
@@ -76,8 +76,7 @@ getQuote().then((quote) => {
         console.log(output, "OUTPUT");
     } catch(error) {
         console.log(error);
-    }
-}``
+    }}``
 
 8. - ## Convert this code to arrow function.
 
@@ -101,14 +100,14 @@ push() method which is used to add new elements  to the end of the array. This f
 
 11. - ## What is the expected answer to this code?
 
-let string = "";
+``let string = "";
 let object = { a: 1, b: 2, c: 3 };
 
 for (let key in object) {
   string += object[key];
-}
+}``
 
-console.log(string); // 123
+``console.log(string); // 123``
 
 ``123``
 
@@ -119,8 +118,8 @@ MAP: return a new array (collection of values), which is an OBJECT, cause everyt
 FILTER: return a new array, the elements that pass the test. If no elements pass the test it returns an empty array
 
 Output of this 
-let array = [1,2,3, 0, 4,10, 0];
-let output = array.filter((item) => item); 
+``let array = [1,2,3, 0, 4,10, 0];``
+``let output = array.filter((item) => item); ``
 
 ``[1, 2, 3, 4, 10]``
 
