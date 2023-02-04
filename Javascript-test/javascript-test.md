@@ -12,9 +12,9 @@
 
 2. - ## Name 3 examples of ES6 features which you learnt.
 
-- ``let / const keywords
-- arrow functions ()=>
-- For / of``
+- ``let / const keywords``
+- ``arrow functions ()=>``
+- ``For / of``
 
 3.  - ## What is the difference between let and const?
       Although var declarations are globally scoped or function scoped, let and const keywords are block scope. But even these are though are block scoped, there is still difference between these keyowords.
@@ -28,9 +28,9 @@
 
 5.  - ## What does setInterval and setTimeout do?
 
-setTimeout() is an asynchronous functions that allows us to run executions once after the interval of time. this sets a timer which executes a functions or a piece of code once the timer expires.
+``setTimeout()`` is an asynchronous functions that allows us to run executions once after the interval of time. this sets a timer which executes a functions or a piece of code once the timer expires.
 
-setInterval() is a method that repeats a specific functions or piece of code, starting after the interval of time, then repeating continuously at that interval.
+``setInterval()`` is a method that repeats a specific functions or piece of code, starting after the interval of time, then repeating continuously at that interval.
 
 What will be the output of the following ?
 
