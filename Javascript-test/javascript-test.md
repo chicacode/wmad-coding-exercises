@@ -70,14 +70,14 @@ getQuote().then((quote) => {
 
 // after this line,
 
-async function getQuote(quote){
+``async function getQuote(quote){
       try {
         let output = await quote;
         console.log(output, "OUTPUT");
     } catch(error) {
         console.log(error);
     }
-}
+}``
 
 8. - ## Convert this code to arrow function.
 
@@ -110,7 +110,7 @@ for (let key in object) {
 
 console.log(string); // 123
 
-123
+``123``
 
 12. ## What data type would Array.map() and Array.filter() return?
 
@@ -122,7 +122,7 @@ Output of this
 let array = [1,2,3, 0, 4,10, 0];
 let output = array.filter((item) => item); 
 
- // [1, 2, 3, 4, 10]
+``[1, 2, 3, 4, 10]``
 
  13. - ## What data type would Array.includes() and Array.some() return?
 
@@ -144,8 +144,9 @@ JavaScript objects can only be used in JavaScript.
 
 16. - ## Use this endpoint and fetch the output using FETCH API and print them on the console. Use both .then and catch and try and catch block as well.
 
-https://www.boredapi.com/api/activity
+``https://www.boredapi.com/api/activity``
 
+```
 function giveMetheAnswer(){
   fetch("https://www.boredapi.com/api/activity")
   .then(response => {
@@ -159,15 +160,17 @@ function giveMetheAnswer(){
 })
 }
 giveMetheAnswer();
+```
 
 Response
 
-1. {"activity":"Clean out your closet and donate the clothes you've outgrown","type":"charity","participants":1,"price":0,"link":"","key":"9026787","accessibility":0.1}
+1. 
+````{"activity":"Clean out your closet and donate the clothes you've outgrown","type":"charity","participants":1,"price":0,"link":"","key":"9026787","accessibility":0.1}````
 
 2. jsonResponse 
 
-  {activity: 'Organize a bookshelf', type: 'busywork', participants: 1, price: 0, link: '', …}
-3. {
+  ````{activity: 'Organize a bookshelf', type: 'busywork', participants: 1, price: 0, link: '', …}````
+3. ````{
     "activity": "Have a photo session with some friends",
     "type": "social",
     "participants": 4,
@@ -175,9 +178,9 @@ Response
     "link": "",
     "key": "3305912",
     "accessibility": 0.8
-}
+}```
 
-4. {
+4. ````{
     "activity": "Mow your neighbor's lawn",
     "type": "charity",
     "participants": 1,
@@ -185,4 +188,4 @@ Response
     "link": "",
     "key": "1303906",
     "accessibility": 0.2
-}
+}````
