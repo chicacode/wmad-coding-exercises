@@ -651,29 +651,99 @@ for (let key in object) {
 // console.log("Here", string);
 
 
-let array2 = [1,2,3, 0, 4,10, 0];
+let array2 = [1, 2, 3, 0, 4, 10, 0];
 let output = array2.filter((item) => {
   console.log(item)
   return item
-}); 
+});
 
 // console.log("output", output)
 
-function giveMetheAnswer(){
+function giveMetheAnswer() {
 
   fetch("https://www.boredapi.com/api/activity")
-  .then(response => {
+    .then(response => {
 
-    return response.json();
-  })
-  .then(jsonResponse => {
-   return console.log("jsonResponse", jsonResponse);
-  }).catch((error) => {
-    // Handle the error
-    console.log(error);
-})
+      return response.json();
+    })
+    .then(jsonResponse => {
+      return console.log("jsonResponse", jsonResponse);
+    }).catch((error) => {
+      // Handle the error
+      console.log(error);
+    })
 }
 giveMetheAnswer();
 
 //output 
 // {"activity":"Clean out your closet and donate the clothes you've outgrown","type":"charity","participants":1,"price":0,"link":"","key":"9026787","accessibility":0.1}
+
+
+// Rithm Schools
+// Functions exercises
+
+// 1. Write a function called myName that logs your full name. Save your full name to a variable inside of the function body, then use console.log to print your name to the console.
+
+function myName(name) {
+  return `My name is:: ${name}`
+}
+
+let outputName = myName("chica");
+
+console.log(outputName);
+
+// 2. Create an array called favoriteFoods which contains the strings "pizza" and "ice cream".
+
+let favoriteFoods = ["sushi", "water", "veggies", "mushrooms"]
+
+// 3. Write a function called randomFood. The function should use Math.random to randomly choose a favorite food in your favoriteFoods array to return. For example, your function will return either pizza or ice cream, depending on what you get back 
+function randomFood(arrayFood) {
+
+  for (let index = 0; index < arrayFood.length; index++) {
+    let output = arrayFood[Math.floor(Math.random() * arrayFood.length)];
+    return `His favorite food is:: ${output}`
+  }
+
+}
+
+let outPutFood = randomFood(favoriteFoods);
+console.log(outPutFood)
+
+
+let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function isOddNumber(arrayNum) {
+
+  const odds = [];
+  arrayNum.forEach((num) => {
+    if (num % 2 === 1) {
+     return odds.push(num);
+    }
+  });
+
+  return odds;
+}
+
+let outpuNumOdd = isOddNumber(arrayNumbers);
+
+console.log("Odd:",outpuNumOdd)
+
+
+function isEventNumber(arrayNum) {
+
+  const even = [];
+  arrayNum.forEach((num) => {
+    if (num % 2 === 0) {
+     return even.push(num);
+    }
+  });
+
+  return even;
+}
+
+let outpuNumEven = isEventNumber(arrayNumbers);
+
+console.log("Even:", outpuNumEven)
+
+// Create a function called returnFirstOddNumber which iterates over the numbers array and returns the first odd number it finds
+
