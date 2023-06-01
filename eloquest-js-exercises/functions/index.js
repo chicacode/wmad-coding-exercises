@@ -29,7 +29,36 @@ function isEven(a) {
     }
   }
 
-  console.log(isEven(50));
-  console.log(isEven(75));
-  console.log(isEven(-1));
-  console.log(isEven(20));
+//   console.log(isEven(50));
+//   console.log(isEven(75));
+//   console.log(isEven(-1));
+//   console.log(isEven(20));
+
+function countBs(string) {
+// initialized to 0 number
+    let number = 0;
+
+    for (let index = 0; index < string.length; index++) {
+       if(string.charAt(index) === "B"){
+        number+= 1;
+        console.log("num", number)
+       }  
+    }
+
+    return number;
+  }
+//   console.log(countBs("BBBBBBC")); // 6
+  function countChar(a, b){
+    let number = 0;
+
+    for (let index = 0; index < a.length; index++) {
+        //If the character at the current position is the same as the one the function is looking for, 
+        if(a.charAt(index) === b){
+            // it adds 1 to a counter variable
+         number+= 1;
+        }  
+     }
+     // the counter can be returned.
+     return number;
+  }
+  console.log(countChar("abracadara", "a")); // 5
